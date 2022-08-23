@@ -68,3 +68,17 @@ document.getElementById("calculateBtn").addEventListener("click", function () {
 
   document.getElementById("totalPlayerCost").innerText = totalPlayerCost;
 });
+
+//total calculate
+document
+  .getElementById("totalCalculateBtn")
+  .addEventListener("click", function () {
+    const managerCost = parseInt(document.getElementById("managerCost").value);
+    const coachCost = parseInt(document.getElementById("coachCost").value);
+    const totalPlayerCost = parseInt(
+      document.getElementById("totalPlayerCost").innerText
+    );
+    totalCost = managerCost + coachCost + totalPlayerCost;
+    document.getElementById("totalCost").innerText = totalCost;
+    allFieldEmpty();
+  });
