@@ -59,3 +59,12 @@ document.getElementById("6thPlayer").addEventListener("click", function () {
   const playerName = document.getElementById("6thPlayerName").innerText;
   addPlayers(playerName, btnId);
 });
+//budget
+document.getElementById("calculateBtn").addEventListener("click", function () {
+  const perPlayerRate = parseInt(
+    document.getElementById("perPlayerCost").value
+  );
+  totalPlayerCost = perPlayerRate * arr.length;
+
+  document.getElementById("totalPlayerCost").innerText = totalPlayerCost;
+});
